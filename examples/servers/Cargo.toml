@@ -87,3 +87,7 @@ path = "src/sampling_stdio.rs"
 [[example]]
 name = "servers_structured_output"
 path = "src/structured_output.rs"
+
+[[bin]]
+name = "react_component_server"
+path = "src/react_component_server.rs"

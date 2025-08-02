@@ -1,0 +1,70 @@
+[package]
+name = "react-component-server"
+version = "1.0.0"
+edition = "2021"
+authors = ["RMCP Contributors"]
+description = "A Model Context Protocol server for React components and documentation"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/modelcontextprotocol/rust-sdk"
+keywords = ["mcp", "react", "components", "documentation", "server"]
+categories = ["web-programming", "development-tools"]
+readme = "README_REACT_COMPONENTS.md"
+
+[[bin]]
+name = "react-component-server"
+path = "src/main.rs"
+
+[[bin]]
+name = "test-basic"
+path = "src/client/test_react_component_server.rs"
+
+[[bin]]
+name = "test-advanced"
+path = "src/client/test_react_advanced.rs"
+
+[[bin]]  
+name = "test-errors"
+path = "src/client/test_react_errors.rs"
+
+[dependencies]
+# Core MCP dependencies
+rmcp = { path = "../crates/rmcp", features = [
+    "server",
+    "client",
+    "macros",
+    "transport-io",
+    "transport-child-process",
+] }
+
+# Async runtime
+tokio = { version = "1", features = [
+    "macros",
+    "rt",
+    "rt-multi-thread",
+    "io-std",
+    "signal",
+] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Schema generation
+schemars = { version = "1.0" }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = [
+    "env-filter",
+    "std",
+    "fmt",
+] }
+
+# Error handling
+anyhow = "1.0"
+
+[dev-dependencies]
+futures = "0.3"
+
+[features]
+default = []

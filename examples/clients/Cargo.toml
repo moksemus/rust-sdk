@@ -56,3 +56,15 @@ path = "src/auth/oauth_client.rs"
 [[example]]
 name = "clients_sampling_stdio"
 path = "src/sampling_stdio.rs"
+
+[[bin]]
+name = "test_react_component_server"
+path = "src/test_react_component_server.rs"
+
+[[bin]]
+name = "test_react_advanced"
+path = "src/test_react_advanced.rs"
+
+[[bin]]
+name = "test_react_errors"
+path = "src/test_react_errors.rs"
