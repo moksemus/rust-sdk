@@ -1,0 +1,143 @@
+{
+  "name": "Avatar",
+  "version": "1.0.0",
+  "description": "An avatar is a graphical representation of a user, team, or entity. Avatar can display an image, initials, or an icon.",
+  "category": "Display",
+  "tags": ["avatar", "profile", "user", "image", "initials", "badge", "presence"],
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "examples": ["examples/basic.tsx", "examples/sizes.tsx", "examples/image.tsx", "examples/group.tsx"]
+  },
+  "props": [
+    {
+      "name": "active",
+      "type": "'active' | 'inactive' | 'unset'",
+      "required": false,
+      "description": "Optional activity indicator - active: decorated according to activeAppearance, inactive: reduced size and partially transparent, unset: normal display",
+      "default_value": "unset"
+    },
+    {
+      "name": "activeAppearance",
+      "type": "'ring' | 'shadow' | 'ring-shadow'",
+      "required": false,
+      "description": "The appearance when active='active'",
+      "default_value": "ring"
+    },
+    {
+      "name": "color",
+      "type": "'neutral' | 'brand' | 'colorful' | AvatarNamedColor",
+      "required": false,
+      "description": "The color when displaying either an icon or initials. neutral: gray, brand: brand palette color, colorful: picks color based on name hash",
+      "default_value": "neutral"
+    },
+    {
+      "name": "idForColor",
+      "type": "string",
+      "required": false,
+      "description": "String to be used instead of name to determine which color to use when color='colorful'",
+      "default_value": "undefined"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": false,
+      "description": "The name of the person or entity represented by this Avatar. Used to determine initials and provided to accessibility tools",
+      "default_value": "undefined"
+    },
+    {
+      "name": "shape",
+      "type": "'circular' | 'square'",
+      "required": false,
+      "description": "The avatar can have a circular or square shape",
+      "default_value": "circular"
+    },
+    {
+      "name": "size",
+      "type": "16 | 20 | 24 | 28 | 32 | 36 | 40 | 48 | 56 | 64 | 72 | 96 | 120 | 128",
+      "required": false,
+      "description": "Size of the avatar in pixels. Restricted to supported values recommended for most uses",
+      "default_value": "32"
+    },
+    {
+      "name": "image",
+      "type": "Slot<'img'>",
+      "required": false,
+      "description": "The Avatar's image slot",
+      "default_value": "undefined"
+    },
+    {
+      "name": "initials",
+      "type": "Slot<'span'>",
+      "required": false,
+      "description": "Custom initials slot. Usually derived from name prop using getInitials function",
+      "default_value": "undefined"
+    },
+    {
+      "name": "icon",
+      "type": "Slot<'span'>",
+      "required": false,
+      "description": "Icon to be displayed when the avatar doesn't have an image or initials",
+      "default_value": "PersonRegular"
+    },
+    {
+      "name": "badge",
+      "type": "Slot<typeof PresenceBadge>",
+      "required": false,
+      "description": "Badge to show the avatar's presence status",
+      "default_value": "undefined"
+    }
+  ],
+  "subComponents": [
+    {
+      "name": "AvatarGroup",
+      "description": "A group container for multiple avatars with layout and overflow handling",
+      "props": [
+        {
+          "name": "layout",
+          "type": "'spread' | 'stack' | 'pie'",
+          "required": false,
+          "description": "Layout the AvatarGroupItems should be displayed as",
+          "default_value": "spread"
+        },
+        {
+          "name": "size",
+          "type": "AvatarSize",
+          "required": false,
+          "description": "Size of the AvatarGroupItems",
+          "default_value": "32"
+        }
+      ]
+    },
+    {
+      "name": "AvatarGroupItem",
+      "description": "Individual avatar item within an AvatarGroup",
+      "props": [
+        {
+          "name": "name",
+          "type": "string",
+          "required": false,
+          "description": "The name of the person or entity represented by this avatar",
+          "default_value": "undefined"
+        }
+      ]
+    },
+    {
+      "name": "AvatarGroupPopover",
+      "description": "Popover container for overflow avatars in an AvatarGroup",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The overflow avatars to display in the popover",
+          "default_value": ""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    "@fluentui/react-components",
+    "@fluentui/react-badge"
+  ]
+}

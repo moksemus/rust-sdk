@@ -1,0 +1,187 @@
+{
+  "name": "Carousel",
+  "version": "1.0.0",
+  "description": "A horizontal scrollable container for navigating between multiple items. Supports multiple navigation methods including drag, keyboard, and autoplay functionality.",
+  "category": "Navigation",
+  "tags": ["navigation", "slider", "gallery", "scrollable", "autoplay"],
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "examples": ["examples/basic.tsx", "examples/autoplay.tsx", "examples/controlled.tsx", "examples/responsive.tsx"]
+  },
+  "props": [
+    {
+      "name": "defaultActiveIndex",
+      "type": "number",
+      "required": false,
+      "description": "The initial page to display in uncontrolled mode",
+      "default_value": "0"
+    },
+    {
+      "name": "align",
+      "type": "'center' | 'start' | 'end'",
+      "required": false,
+      "description": "The alignment of the carousel",
+      "default_value": "start"
+    },
+    {
+      "name": "activeIndex",
+      "type": "number",
+      "required": false,
+      "description": "The value of the currently active page",
+      "default_value": "undefined"
+    },
+    {
+      "name": "onActiveIndexChange",
+      "type": "EventHandler<CarouselIndexChangeData>",
+      "required": false,
+      "description": "Callback to notify a page change",
+      "default_value": "undefined"
+    },
+    {
+      "name": "circular",
+      "type": "boolean",
+      "required": false,
+      "description": "Circular enables the carousel to loop back around on navigation past trailing index",
+      "default_value": "false"
+    },
+    {
+      "name": "groupSize",
+      "type": "number | 'auto'",
+      "required": false,
+      "description": "Controls the number of carousel cards per navigation element",
+      "default_value": "auto"
+    },
+    {
+      "name": "draggable",
+      "type": "boolean",
+      "required": false,
+      "description": "Enables drag to scroll on carousel items",
+      "default_value": "false"
+    },
+    {
+      "name": "whitespace",
+      "type": "boolean",
+      "required": false,
+      "description": "Adds whitespace to start/end so that 'align' prop is always respected for current index",
+      "default_value": "false"
+    },
+    {
+      "name": "motion",
+      "type": "CarouselMotion",
+      "required": false,
+      "description": "Sets motion type as either 'slide' or 'fade'",
+      "default_value": "slide"
+    },
+    {
+      "name": "announcement",
+      "type": "CarouselAnnouncerFunction",
+      "required": false,
+      "description": "Localizes the string used to announce carousel page changes",
+      "default_value": "undefined"
+    },
+    {
+      "name": "autoplayInterval",
+      "type": "number",
+      "required": false,
+      "description": "Choose a delay between autoplay transitions in milliseconds",
+      "default_value": "4000"
+    }
+  ],
+  "subComponents": [
+    {
+      "name": "CarouselButton",
+      "description": "Navigation button for carousel pagination",
+      "props": [
+        {
+          "name": "nav",
+          "type": "'prev' | 'next'",
+          "required": true,
+          "description": "The direction this button will navigate",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "CarouselCard",
+      "description": "A single item/slide within the carousel",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The content to display in the card",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "CarouselNav",
+      "description": "Navigation container for carousel pagination buttons",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Navigation buttons or custom navigation content",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "CarouselNavButton",
+      "description": "Individual navigation button for specific carousel slide",
+      "props": [
+        {
+          "name": "value",
+          "type": "number",
+          "required": true,
+          "description": "The index of the slide this button navigates to",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "CarouselAutoplayButton",
+      "description": "Button to control autoplay functionality",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Button content (icon or text)",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "CarouselSlider",
+      "description": "Container for carousel cards/slides",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "CarouselCard components",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "CarouselViewport",
+      "description": "Viewport container for the carousel content",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "Carousel content to be displayed in viewport",
+          "default_value": ""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    "@fluentui/react-components"
+  ]
+}

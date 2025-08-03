@@ -1,0 +1,145 @@
+{
+  "name": "Menu",
+  "version": "1.0.0",
+  "description": "A contextual overlay that displays a list of actions or options. Typically triggered by a button or other control.",
+  "category": "Navigation",
+  "tags": ["navigation", "contextual", "dropdown", "actions", "overlay"],
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "examples": ["examples/basic.tsx", "examples/nested.tsx", "examples/selection.tsx", "examples/icons.tsx"]
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": true,
+      "description": "Menu items and content",
+      "default_value": ""
+    },
+    {
+      "name": "open",
+      "type": "boolean",
+      "required": false,
+      "description": "Controls the open state of the menu",
+      "default_value": "undefined"
+    },
+    {
+      "name": "defaultOpen",
+      "type": "boolean",
+      "required": false,
+      "description": "Default open state for uncontrolled menu",
+      "default_value": "false"
+    },
+    {
+      "name": "onOpenChange",
+      "type": "EventHandler<MenuOpenChangeData>",
+      "required": false,
+      "description": "Callback when the open state changes",
+      "default_value": "undefined"
+    },
+    {
+      "name": "closeOnScroll",
+      "type": "boolean",
+      "required": false,
+      "description": "Close menu when scrolling outside",
+      "default_value": "false"
+    },
+    {
+      "name": "persistOnItemClick",
+      "type": "boolean",
+      "required": false,
+      "description": "Keep menu open when clicking items",
+      "default_value": "false"
+    }
+  ],
+  "subComponents": [
+    {
+      "name": "MenuTrigger",
+      "description": "Element that triggers the menu to open",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "Trigger element (button, etc.)",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "MenuPopover",
+      "description": "Container for menu content",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "Menu list and items",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "MenuList",
+      "description": "List container for menu items",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "MenuItem components",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "MenuItem",
+      "description": "Individual selectable item in the menu",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "Item content",
+          "default_value": ""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "description": "Whether the item is disabled",
+          "default_value": "false"
+        }
+      ]
+    },
+    {
+      "name": "MenuItemCheckbox",
+      "description": "Checkable menu item",
+      "props": [
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Name for form grouping",
+          "default_value": ""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "required": true,
+          "description": "Value of the checkbox",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "MenuDivider",
+      "description": "Visual separator between menu sections",
+      "props": []
+    }
+  ],
+  "dependencies": [
+    "@fluentui/react-components"
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "name": "Combobox",
+  "version": "1.0.0",
+  "description": "A text input with an associated popup that enables users to select a value or enter a custom value. Supports autocomplete, filtering, multiselect, and freeform input.",
+  "category": "Input",
+  "tags": ["input", "autocomplete", "dropdown", "selection", "filtering"],
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "examples": ["examples/basic.tsx", "examples/controlled.tsx", "examples/multiselect.tsx", "examples/sizes.tsx"]
+  },
+  "props": [
+    {
+      "name": "freeform",
+      "type": "boolean",
+      "required": false,
+      "description": "Allow custom user input beyond provided options",
+      "default_value": "false"
+    },
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": false,
+      "description": "The option elements to render in the dropdown",
+      "default_value": ""
+    },
+    {
+      "name": "appearance",
+      "type": "'filled-darker' | 'filled-lighter' | 'outline' | 'underline'",
+      "required": false,
+      "description": "Controls the colors and borders of the combobox trigger",
+      "default_value": "outline"
+    },
+    {
+      "name": "clearable",
+      "type": "boolean",
+      "required": false,
+      "description": "If set, the combobox will show an icon to clear the current value",
+      "default_value": "false"
+    },
+    {
+      "name": "defaultOpen",
+      "type": "boolean",
+      "required": false,
+      "description": "The default open state when open is uncontrolled",
+      "default_value": "false"
+    },
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "required": false,
+      "description": "The default value displayed in the trigger input when uncontrolled",
+      "default_value": ""
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "description": "Disable the combobox",
+      "default_value": "false"
+    },
+    {
+      "name": "inlinePopup",
+      "type": "boolean",
+      "required": false,
+      "description": "Render the combobox's popup inline in the DOM",
+      "default_value": "false"
+    },
+    {
+      "name": "multiselect",
+      "type": "boolean",
+      "required": false,
+      "description": "Enable selection of multiple options",
+      "default_value": "false"
+    },
+    {
+      "name": "open",
+      "type": "boolean",
+      "required": false,
+      "description": "Controls the open state of the dropdown",
+      "default_value": "undefined"
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": false,
+      "description": "Placeholder text for the input",
+      "default_value": ""
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large'",
+      "required": false,
+      "description": "Size of the combobox",
+      "default_value": "medium"
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": false,
+      "description": "The controlled value of the input",
+      "default_value": "undefined"
+    },
+    {
+      "name": "onOpenChange",
+      "type": "EventHandler<ComboboxBaseOpenChangeData>",
+      "required": false,
+      "description": "Callback when the open state changes",
+      "default_value": "undefined"
+    }
+  ],
+  "subComponents": [
+    {
+      "name": "Option",
+      "description": "Individual selectable option within the combobox dropdown",
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": true,
+          "description": "The unique value for this option",
+          "default_value": ""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "description": "Disable this option",
+          "default_value": "false"
+        },
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The content to display for this option",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "OptionGroup",
+      "description": "Groups related options together with an optional label",
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "required": false,
+          "description": "Label for this group of options",
+          "default_value": ""
+        },
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "Option components in this group",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "Listbox",
+      "description": "Container for combobox options",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "Option and OptionGroup components",
+          "default_value": ""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    "@fluentui/react-components"
+  ]
+}

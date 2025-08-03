@@ -1,0 +1,135 @@
+{
+  "name": "Accordion",
+  "version": "1.0.0",
+  "description": "A vertically stacked set of interactive headings that each reveal a section of content. Supports single or multiple panel expansion.",
+  "category": "Navigation",
+  "tags": ["navigation", "disclosure", "collapsible", "expandable", "content"],
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "examples": ["examples/basic.tsx", "examples/sizes.tsx", "examples/multiple.tsx", "examples/controlled.tsx"]
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": true,
+      "description": "The accordion items to render",
+      "default_value": ""
+    },
+    {
+      "name": "defaultOpenItems",
+      "type": "AccordionItemValue | AccordionItemValue[]",
+      "required": false,
+      "description": "Default value for the uncontrolled state of the panel",
+      "default_value": "undefined"
+    },
+    {
+      "name": "collapsible",
+      "type": "boolean",
+      "required": false,
+      "description": "Indicates if Accordion support multiple Panels closed at the same time",
+      "default_value": "false"
+    },
+    {
+      "name": "multiple",
+      "type": "boolean",
+      "required": false,
+      "description": "Indicates if Accordion support multiple Panels opened at the same time",
+      "default_value": "false"
+    },
+    {
+      "name": "navigation",
+      "type": "'linear' | 'circular'",
+      "required": false,
+      "description": "Indicates if keyboard navigation is available and gives two options, linear or circular navigation (deprecated)",
+      "default_value": "undefined"
+    },
+    {
+      "name": "onToggle",
+      "type": "AccordionToggleEventHandler",
+      "required": false,
+      "description": "Callback to be called when the opened items change",
+      "default_value": "undefined"
+    },
+    {
+      "name": "openItems",
+      "type": "AccordionItemValue | AccordionItemValue[]",
+      "required": false,
+      "description": "Controls the state of the panel",
+      "default_value": "undefined"
+    }
+  ],
+  "subComponents": [
+    {
+      "name": "AccordionItem",
+      "description": "A single item within an accordion",
+      "props": [
+        {
+          "name": "value",
+          "type": "AccordionItemValue",
+          "required": true,
+          "description": "Required value that identifies this item inside an Accordion component",
+          "default_value": ""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "description": "Disables opening/closing of panel",
+          "default_value": "false"
+        }
+      ]
+    },
+    {
+      "name": "AccordionHeader",
+      "description": "The header/trigger for an accordion item",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The content to display in the header",
+          "default_value": ""
+        },
+        {
+          "name": "expandIconPosition",
+          "type": "'start' | 'end'",
+          "required": false,
+          "description": "The position of the expand icon slot in heading",
+          "default_value": "end"
+        },
+        {
+          "name": "inline",
+          "type": "boolean",
+          "required": false,
+          "description": "Indicates if the AccordionHeader should be rendered inline",
+          "default_value": "false"
+        },
+        {
+          "name": "size",
+          "type": "'small' | 'medium' | 'large' | 'extra-large'",
+          "required": false,
+          "description": "Size of spacing in the heading",
+          "default_value": "medium"
+        }
+      ]
+    },
+    {
+      "name": "AccordionPanel",
+      "description": "The collapsible content panel for an accordion item",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "The content to display in the panel",
+          "default_value": ""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    "@fluentui/react-components"
+  ]
+}

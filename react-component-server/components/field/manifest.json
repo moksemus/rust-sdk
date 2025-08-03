@@ -1,0 +1,74 @@
+{
+  "name": "Field",
+  "version": "1.0.0",
+  "description": "A wrapper component that provides a label, validation message, and hint text for form inputs. Used to create consistent form field layouts.",
+  "category": "Input",
+  "tags": ["form", "input", "label", "validation", "wrapper"],
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "examples": ["examples/basic.tsx", "examples/validation.tsx", "examples/required.tsx", "examples/hint.tsx"]
+  },
+  "props": [
+    {
+      "name": "label",
+      "type": "React.ReactNode",
+      "required": false,
+      "description": "Label for the field",
+      "default_value": ""
+    },
+    {
+      "name": "validationState",
+      "type": "'none' | 'error' | 'warning' | 'success'",
+      "required": false,
+      "description": "Validation state of the field",
+      "default_value": "none"
+    },
+    {
+      "name": "validationMessage",
+      "type": "React.ReactNode",
+      "required": false,
+      "description": "Message to display for validation feedback",
+      "default_value": ""
+    },
+    {
+      "name": "hint",
+      "type": "React.ReactNode",
+      "required": false,
+      "description": "Hint text to help users understand the field",
+      "default_value": ""
+    },
+    {
+      "name": "required",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the field is required",
+      "default_value": "false"
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large'",
+      "required": false,
+      "description": "Size of the field",
+      "default_value": "medium"
+    },
+    {
+      "name": "orientation",
+      "type": "'vertical' | 'horizontal'",
+      "required": false,
+      "description": "Layout orientation of the field",
+      "default_value": "vertical"
+    },
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": true,
+      "description": "Form control element (input, textarea, etc.)",
+      "default_value": ""
+    }
+  ],
+  "subComponents": [],
+  "dependencies": [
+    "@fluentui/react-components"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "name": "Badge",
+  "version": "1.0.0",
+  "description": "A badge is a small status indicator or label that can display text, icons, or numbers to highlight an item or convey status information.",
+  "category": "Display",
+  "tags": ["badge", "status", "indicator", "label", "notification", "counter", "presence"],
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "examples": ["examples/basic.tsx", "examples/sizes.tsx", "examples/counter.tsx", "examples/presence.tsx"]
+  },
+  "props": [
+    {
+      "name": "appearance",
+      "type": "'filled' | 'ghost' | 'outline' | 'tint'",
+      "required": false,
+      "description": "Badge appearance style - filled: solid background, ghost: transparent background, outline: outlined border, tint: subtle background",
+      "default_value": "filled"
+    },
+    {
+      "name": "color",
+      "type": "'brand' | 'danger' | 'important' | 'informative' | 'severe' | 'subtle' | 'success' | 'warning'",
+      "required": false,
+      "description": "Semantic color for the badge indicating different types of status or importance",
+      "default_value": "brand"
+    },
+    {
+      "name": "iconPosition",
+      "type": "'before' | 'after'",
+      "required": false,
+      "description": "Position of the icon relative to the badge content",
+      "default_value": "before"
+    },
+    {
+      "name": "shape",
+      "type": "'circular' | 'rounded' | 'square'",
+      "required": false,
+      "description": "Shape of the badge - circular: fully rounded, rounded: slightly rounded corners, square: sharp corners",
+      "default_value": "circular"
+    },
+    {
+      "name": "size",
+      "type": "'tiny' | 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large'",
+      "required": false,
+      "description": "Size of the badge affecting padding and font size",
+      "default_value": "medium"
+    },
+    {
+      "name": "icon",
+      "type": "Slot<'span'>",
+      "required": false,
+      "description": "Icon to display within the badge",
+      "default_value": "undefined"
+    }
+  ],
+  "subComponents": [
+    {
+      "name": "CounterBadge",
+      "description": "A badge specialized for displaying numeric counts with overflow handling",
+      "props": [
+        {
+          "name": "appearance",
+          "type": "'filled' | 'ghost'",
+          "required": false,
+          "description": "Counter badge appearance - filled or ghost style only",
+          "default_value": "filled"
+        },
+        {
+          "name": "color",
+          "type": "'brand' | 'danger' | 'important' | 'informative'",
+          "required": false,
+          "description": "Semantic colors for counter badge",
+          "default_value": "brand"
+        },
+        {
+          "name": "count",
+          "type": "number",
+          "required": false,
+          "description": "Numeric value displayed by the badge",
+          "default_value": "0"
+        },
+        {
+          "name": "dot",
+          "type": "boolean",
+          "required": false,
+          "description": "If true, displays a dot without the count",
+          "default_value": "false"
+        },
+        {
+          "name": "overflowCount",
+          "type": "number",
+          "required": false,
+          "description": "Maximum number to display before showing overflow indicator (e.g., 99+)",
+          "default_value": "99"
+        },
+        {
+          "name": "shape",
+          "type": "'circular' | 'rounded'",
+          "required": false,
+          "description": "Shape of the counter badge",
+          "default_value": "circular"
+        },
+        {
+          "name": "showZero",
+          "type": "boolean",
+          "required": false,
+          "description": "Whether to show the badge when count is 0",
+          "default_value": "false"
+        }
+      ]
+    },
+    {
+      "name": "PresenceBadge",
+      "description": "A badge that indicates user presence status with predefined status options",
+      "props": [
+        {
+          "name": "status",
+          "type": "'busy' | 'out-of-office' | 'away' | 'available' | 'offline' | 'do-not-disturb' | 'unknown' | 'blocked'",
+          "required": false,
+          "description": "User presence status",
+          "default_value": "available"
+        },
+        {
+          "name": "outOfOffice",
+          "type": "boolean",
+          "required": false,
+          "description": "Indicates that the user is out of office. Can be combined with any status",
+          "default_value": "false"
+        },
+        {
+          "name": "size",
+          "type": "'tiny' | 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large'",
+          "required": false,
+          "description": "Size of the presence badge",
+          "default_value": "medium"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    "@fluentui/react-components"
+  ]
+}

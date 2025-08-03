@@ -1,0 +1,127 @@
+{
+  "name": "Drawer",
+  "version": "1.0.0",
+  "description": "A panel that slides in from the edge of the screen. Can be used for navigation, additional information, or secondary actions.",
+  "category": "Layout",
+  "tags": ["layout", "navigation", "panel", "sidebar", "overlay"],
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "examples": ["examples/basic.tsx", "examples/position.tsx", "examples/sizes.tsx", "examples/overlay.tsx"]
+  },
+  "props": [
+    {
+      "name": "type",
+      "type": "'inline' | 'overlay'",
+      "required": false,
+      "description": "Type of the drawer - overlay is hidden by default, inline is stacked with content",
+      "default_value": "overlay"
+    },
+    {
+      "name": "open",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the drawer is open (controlled)",
+      "default_value": "undefined"
+    },
+    {
+      "name": "defaultOpen",
+      "type": "boolean",
+      "required": false,
+      "description": "Default open state (uncontrolled)",
+      "default_value": "false"
+    },
+    {
+      "name": "onOpenChange",
+      "type": "EventHandler<DrawerOpenChangeData>",
+      "required": false,
+      "description": "Callback when the open state changes",
+      "default_value": "undefined"
+    },
+    {
+      "name": "position",
+      "type": "'start' | 'end'",
+      "required": false,
+      "description": "Position of the drawer relative to the content",
+      "default_value": "start"
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large' | 'full'",
+      "required": false,
+      "description": "Size of the drawer",
+      "default_value": "medium"
+    },
+    {
+      "name": "separator",
+      "type": "boolean",
+      "required": false,
+      "description": "Show a separator between drawer and content",
+      "default_value": "false"
+    },
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": true,
+      "description": "Content to render inside the drawer",
+      "default_value": ""
+    }
+  ],
+  "subComponents": [
+    {
+      "name": "DrawerHeader",
+      "description": "Header section of the drawer",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "Header content",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "DrawerHeaderTitle",
+      "description": "Title within the drawer header",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "Title text",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "DrawerBody",
+      "description": "Main content area of the drawer",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "Body content",
+          "default_value": ""
+        }
+      ]
+    },
+    {
+      "name": "DrawerFooter",
+      "description": "Footer section of the drawer",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "Footer content",
+          "default_value": ""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    "@fluentui/react-components"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Breadcrumb",
+  "version": "1.0.0",
+  "description": "A breadcrumb provides navigation context by showing the current page's location within a navigational hierarchy.",
+  "category": "Navigation",
+  "tags": ["breadcrumb", "navigation", "hierarchy", "path", "wayfinding"],
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "examples": ["examples/basic.tsx", "examples/sizes.tsx", "examples/overflow.tsx"]
+  },
+  "props": [
+    {
+      "name": "focusMode",
+      "type": "'arrow' | 'tab'",
+      "required": false,
+      "description": "Controls focus behavior - tab: cycles through elements with Tab key, arrow: cycles with Arrow keys",
+      "default_value": "tab"
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large'",
+      "required": false,
+      "description": "Controls size of breadcrumb items and dividers",
+      "default_value": "medium"
+    }
+  ],
+  "subComponents": [
+    {
+      "name": "BreadcrumbItem",
+      "description": "Individual breadcrumb item representing a single level in the navigation hierarchy",
+      "props": [
+        {
+          "name": "current",
+          "type": "boolean",
+          "required": false,
+          "description": "Indicates the current page in the breadcrumb trail",
+          "default_value": "false"
+        }
+      ]
+    },
+    {
+      "name": "BreadcrumbButton",
+      "description": "Interactive breadcrumb item that can be clicked to navigate",
+      "props": [
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "required": false,
+          "description": "Callback fired when the breadcrumb button is clicked",
+          "default_value": "undefined"
+        }
+      ]
+    },
+    {
+      "name": "BreadcrumbDivider",
+      "description": "Visual separator between breadcrumb items",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Custom divider content",
+          "default_value": "/"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    "@fluentui/react-components"
+  ]
+}
