@@ -1,0 +1,55 @@
+{
+  "name": "Spinner",
+  "description": "A spinner component from Fluent UI that displays a loading indicator to show that an operation is in progress.",
+  "category": "Feedback",
+  "tags": ["spinner", "loading", "progress", "feedback", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Spinner",
+    "types": "SpinnerProps"
+  },
+  "props": [
+    {
+      "name": "appearance",
+      "type": "'primary' | 'inverted'",
+      "required": false,
+      "default": "primary",
+      "description": "Visual appearance of the spinner"
+    },
+    {
+      "name": "label",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "Accessible label for the spinner"
+    },
+    {
+      "name": "labelPosition",
+      "type": "'above' | 'below' | 'before' | 'after'",
+      "required": false,
+      "default": "after",
+      "description": "Position of the label relative to the spinner"
+    },
+    {
+      "name": "size",
+      "type": "'extra-tiny' | 'tiny' | 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large' | 'huge'",
+      "required": false,
+      "default": "medium",
+      "description": "Size of the spinner"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Progress",
+  "description": "A progress indicator component from Fluent UI that shows the completion progress of a task or operation.",
+  "category": "Feedback",
+  "tags": ["progress", "loading", "completion", "feedback", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Progress",
+    "types": "ProgressProps"
+  },
+  "props": [
+    {
+      "name": "value",
+      "type": "number",
+      "required": false,
+      "default": "0",
+      "description": "Current progress value (0-1 for determinate, undefined for indeterminate)"
+    },
+    {
+      "name": "max",
+      "type": "number",
+      "required": false,
+      "default": "1",
+      "description": "Maximum value for the progress bar"
+    },
+    {
+      "name": "thickness",
+      "type": "'medium' | 'large'",
+      "required": false,
+      "default": "medium",
+      "description": "Thickness of the progress bar"
+    },
+    {
+      "name": "shape",
+      "type": "'rounded' | 'square'",
+      "required": false,
+      "default": "rounded",
+      "description": "Shape of the progress bar ends"
+    },
+    {
+      "name": "validationState",
+      "type": "'error' | 'warning' | 'success'",
+      "required": false,
+      "default": "",
+      "description": "Validation state affecting the progress bar color"
+    }
+  ]
+}

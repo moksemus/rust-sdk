@@ -1,0 +1,62 @@
+{
+  "name": "Label",
+  "description": "A label component from Fluent UI that provides accessible labeling for form controls and interactive elements.",
+  "category": "Input",
+  "tags": ["label", "form", "accessibility", "text", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Label",
+    "types": "LabelProps"
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "Content to display in the label"
+    },
+    {
+      "name": "htmlFor",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "ID of the form control this label is associated with"
+    },
+    {
+      "name": "required",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the associated field is required"
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large'",
+      "required": false,
+      "default": "medium",
+      "description": "Size of the label text"
+    },
+    {
+      "name": "weight",
+      "type": "'regular' | 'semibold'",
+      "required": false,
+      "default": "regular",
+      "description": "Font weight of the label"
+    }
+  ]
+}

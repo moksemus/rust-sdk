@@ -1,0 +1,69 @@
+{
+  "name": "Link",
+  "description": "A link component from Fluent UI that provides navigation and external references with consistent styling and accessibility features.",
+  "category": "Navigation",
+  "tags": ["link", "navigation", "anchor", "url", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Link",
+    "types": "LinkProps"
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "Content to display inside the link"
+    },
+    {
+      "name": "href",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "URL or path the link should navigate to"
+    },
+    {
+      "name": "target",
+      "type": "'_blank' | '_self' | '_parent' | '_top'",
+      "required": false,
+      "default": "_self",
+      "description": "Target for the link navigation"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the link is disabled"
+    },
+    {
+      "name": "inline",
+      "type": "boolean",
+      "required": false,
+      "default": "true",
+      "description": "Whether the link should be displayed inline"
+    },
+    {
+      "name": "onClick",
+      "type": "(event: React.MouseEvent<HTMLAnchorElement>) => void",
+      "required": false,
+      "default": "",
+      "description": "Callback fired when the link is clicked"
+    }
+  ]
+}

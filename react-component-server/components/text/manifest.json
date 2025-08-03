@@ -1,0 +1,76 @@
+{
+  "name": "Text",
+  "description": "A text component from Fluent UI that provides consistent typography and styling for displaying text content with various sizes and weights.",
+  "category": "Display",
+  "tags": ["text", "typography", "display", "content", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Text",
+    "types": "TextProps"
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "Text content to display"
+    },
+    {
+      "name": "size",
+      "type": "'100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | '1000'",
+      "required": false,
+      "default": "300",
+      "description": "Size of the text following Fluent UI typography scale"
+    },
+    {
+      "name": "weight",
+      "type": "'regular' | 'medium' | 'semibold'",
+      "required": false,
+      "default": "regular",
+      "description": "Font weight of the text"
+    },
+    {
+      "name": "italic",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the text should be italicized"
+    },
+    {
+      "name": "underline",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the text should be underlined"
+    },
+    {
+      "name": "strikethrough",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the text should have strikethrough"
+    },
+    {
+      "name": "truncate",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether to truncate text with ellipsis if it overflows"
+    }
+  ]
+}

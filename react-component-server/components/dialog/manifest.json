@@ -1,0 +1,69 @@
+{
+  "name": "Dialog",
+  "description": "A dialog component from Fluent UI that displays modal content over the main application, requiring user interaction before proceeding.",
+  "category": "Layout",
+  "tags": ["dialog", "modal", "popup", "overlay", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Dialog",
+    "types": "DialogProps"
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "Content to display inside the dialog"
+    },
+    {
+      "name": "open",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the dialog is open"
+    },
+    {
+      "name": "defaultOpen",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Default open state for uncontrolled dialog"
+    },
+    {
+      "name": "modalType",
+      "type": "'modal' | 'non-modal' | 'alert'",
+      "required": false,
+      "default": "modal",
+      "description": "Type of dialog interaction behavior"
+    },
+    {
+      "name": "onOpenChange",
+      "type": "(event: DialogOpenChangeEvent, data: DialogOpenChangeData) => void",
+      "required": false,
+      "default": "",
+      "description": "Callback fired when the dialog open state changes"
+    },
+    {
+      "name": "inertTrapFocus",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether focus should be trapped within the dialog"
+    }
+  ]
+}

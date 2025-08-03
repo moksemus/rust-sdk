@@ -1,0 +1,70 @@
+{
+  "name": "Checkbox",
+  "description": "A checkbox input component from Fluent UI that allows users to select one or multiple options from a set.",
+  "category": "Input",
+  "tags": ["checkbox", "input", "form", "selection", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx",
+      "examples/sizes.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Checkbox",
+    "types": "CheckboxProps"
+  },
+  "props": [
+    {
+      "name": "checked",
+      "type": "boolean | 'mixed'",
+      "required": false,
+      "default": "false",
+      "description": "Whether the checkbox is checked, unchecked, or in a mixed state"
+    },
+    {
+      "name": "defaultChecked",
+      "type": "boolean | 'mixed'",
+      "required": false,
+      "default": "false",
+      "description": "Default checked state for uncontrolled checkbox"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the checkbox is disabled"
+    },
+    {
+      "name": "label",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "Label to display next to the checkbox"
+    },
+    {
+      "name": "onChange",
+      "type": "(event: React.ChangeEvent<HTMLInputElement>, data: CheckboxOnChangeData) => void",
+      "required": false,
+      "default": "",
+      "description": "Callback fired when the checked state changes"
+    },
+    {
+      "name": "size",
+      "type": "'medium' | 'large'",
+      "required": false,
+      "default": "medium",
+      "description": "Size of the checkbox"
+    }
+  ]
+}

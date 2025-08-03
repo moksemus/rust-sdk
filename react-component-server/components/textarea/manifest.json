@@ -1,0 +1,83 @@
+{
+  "name": "Textarea",
+  "description": "A textarea component from Fluent UI that provides a multi-line text input field for longer text content with various styling options.",
+  "category": "Input",
+  "tags": ["textarea", "input", "form", "multiline", "text", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Textarea",
+    "types": "TextareaProps"
+  },
+  "props": [
+    {
+      "name": "value",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "Current value of the textarea"
+    },
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "Default value for uncontrolled textarea"
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "Placeholder text to display when the textarea is empty"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the textarea is disabled"
+    },
+    {
+      "name": "resize",
+      "type": "'none' | 'both' | 'horizontal' | 'vertical'",
+      "required": false,
+      "default": "none",
+      "description": "Whether and how the textarea can be resized"
+    },
+    {
+      "name": "rows",
+      "type": "number",
+      "required": false,
+      "default": "3",
+      "description": "Number of visible text lines"
+    },
+    {
+      "name": "appearance",
+      "type": "'outline' | 'underline' | 'filled-darker' | 'filled-lighter'",
+      "required": false,
+      "default": "outline",
+      "description": "Visual appearance of the textarea"
+    },
+    {
+      "name": "onChange",
+      "type": "(event: React.ChangeEvent<HTMLTextAreaElement>, data: TextareaOnChangeData) => void",
+      "required": false,
+      "default": "",
+      "description": "Callback fired when the textarea value changes"
+    }
+  ]
+}

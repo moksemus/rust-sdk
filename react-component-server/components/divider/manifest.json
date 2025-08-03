@@ -1,0 +1,62 @@
+{
+  "name": "Divider",
+  "description": "A divider component from Fluent UI that provides visual separation between content sections with optional text labels.",
+  "category": "Layout",
+  "tags": ["divider", "separator", "layout", "visual", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Divider",
+    "types": "DividerProps"
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "Optional text content to display in the divider"
+    },
+    {
+      "name": "alignContent",
+      "type": "'start' | 'center' | 'end'",
+      "required": false,
+      "default": "center",
+      "description": "Alignment of the content within the divider"
+    },
+    {
+      "name": "appearance",
+      "type": "'brand' | 'default' | 'strong' | 'subtle'",
+      "required": false,
+      "default": "default",
+      "description": "Visual appearance of the divider"
+    },
+    {
+      "name": "inset",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the divider should have inset spacing"
+    },
+    {
+      "name": "vertical",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the divider should be oriented vertically"
+    }
+  ]
+}

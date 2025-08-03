@@ -1,0 +1,76 @@
+{
+  "name": "Radio",
+  "description": "A radio button component from Fluent UI that allows users to select a single option from a group of mutually exclusive choices.",
+  "category": "Input",
+  "tags": ["radio", "input", "form", "selection", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Radio",
+    "types": "RadioProps"
+  },
+  "props": [
+    {
+      "name": "checked",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the radio button is checked"
+    },
+    {
+      "name": "defaultChecked",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Default checked state for uncontrolled radio"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the radio button is disabled"
+    },
+    {
+      "name": "label",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "Label to display next to the radio button"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "Name attribute for the radio button group"
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "Value of the radio button"
+    },
+    {
+      "name": "onChange",
+      "type": "(event: React.ChangeEvent<HTMLInputElement>, data: RadioOnChangeData) => void",
+      "required": false,
+      "default": "",
+      "description": "Callback fired when the radio button is selected"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "react-component-server": {
+      "command": "http",
+      "transport": {
+        "type": "sse",
+        "url": "http://localhost:8080/mcp",
+        "headers": {
+          "Authorization": "Bearer your-token-here"
+        }
+      }
+    }
+  }
+}

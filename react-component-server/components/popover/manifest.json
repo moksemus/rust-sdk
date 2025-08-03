@@ -1,0 +1,76 @@
+{
+  "name": "Popover",
+  "description": "A popover component from Fluent UI that displays contextual content in a floating container positioned relative to a trigger element.",
+  "category": "Layout",
+  "tags": ["popover", "tooltip", "floating", "contextual", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Popover",
+    "types": "PopoverProps"
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "Content to display inside the popover"
+    },
+    {
+      "name": "open",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the popover is open"
+    },
+    {
+      "name": "defaultOpen",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Default open state for uncontrolled popover"
+    },
+    {
+      "name": "positioning",
+      "type": "PositioningProps",
+      "required": false,
+      "default": "",
+      "description": "Configuration for popover positioning"
+    },
+    {
+      "name": "onOpenChange",
+      "type": "(event: PopoverOpenChangeEvent, data: PopoverOpenChangeData) => void",
+      "required": false,
+      "default": "",
+      "description": "Callback fired when the popover open state changes"
+    },
+    {
+      "name": "withArrow",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the popover should display an arrow pointing to the trigger"
+    },
+    {
+      "name": "trapFocus",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether focus should be trapped within the popover"
+    }
+  ]
+}

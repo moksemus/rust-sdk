@@ -1,0 +1,76 @@
+{
+  "name": "Tabs",
+  "description": "A tabs component from Fluent UI that organizes content into multiple panels, allowing users to switch between different views or sections.",
+  "category": "Navigation",
+  "tags": ["tabs", "navigation", "panels", "sections", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Tabs",
+    "types": "TabsProps"
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "Tab items and panels to display"
+    },
+    {
+      "name": "selectedValue",
+      "type": "TabValue",
+      "required": false,
+      "default": "",
+      "description": "Currently selected tab value"
+    },
+    {
+      "name": "defaultSelectedValue",
+      "type": "TabValue",
+      "required": false,
+      "default": "",
+      "description": "Default selected tab for uncontrolled tabs"
+    },
+    {
+      "name": "vertical",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether tabs should be arranged vertically"
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large'",
+      "required": false,
+      "default": "medium",
+      "description": "Size of the tabs"
+    },
+    {
+      "name": "appearance",
+      "type": "'transparent' | 'subtle'",
+      "required": false,
+      "default": "transparent",
+      "description": "Visual appearance of the tabs"
+    },
+    {
+      "name": "onTabSelect",
+      "type": "(event: SelectTabEvent, data: SelectTabData) => void",
+      "required": false,
+      "default": "",
+      "description": "Callback fired when a tab is selected"
+    }
+  ]
+}
