@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/examples/simple-chat-client/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/examples/transport/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/examples/wasi/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/react-component-server/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

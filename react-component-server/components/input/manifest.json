@@ -1,0 +1,77 @@
+{
+  "name": "Input",
+  "description": "A text input field component from Fluent UI that allows users to enter and edit text with various appearances and validation states.",
+  "category": "Controls",
+  "tags": ["input", "text", "form", "field", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx",
+      "examples/variants.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Input",
+    "types": "InputProps"
+  },
+  "props": [
+    {
+      "name": "value",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "The controlled value of the input"
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "description": "Placeholder text when input is empty"
+    },
+    {
+      "name": "type",
+      "type": "'text' | 'email' | 'password' | 'tel' | 'url'",
+      "required": false,
+      "default": "text",
+      "description": "The type of input field"
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large'",
+      "required": false,
+      "default": "medium",
+      "description": "The size of the input field"
+    },
+    {
+      "name": "appearance",
+      "type": "'outline' | 'underline' | 'filled-darker' | 'filled-lighter'",
+      "required": false,
+      "default": "outline",
+      "description": "The visual appearance of the input"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": "Whether the input is disabled"
+    },
+    {
+      "name": "onChange",
+      "type": "(event: React.ChangeEvent<HTMLInputElement>) => void",
+      "required": false,
+      "default": "",
+      "description": "Function called when the input value changes"
+    }
+  ]
+}

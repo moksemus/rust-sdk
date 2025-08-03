@@ -1,0 +1,71 @@
+{
+  "name": "Button",
+  "description": "A versatile button component from Fluent UI that supports various appearances, sizes, and states for triggering actions in applications.",
+  "category": "Controls",
+  "tags": ["button", "control", "action", "clickable", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx",
+      "examples/variants.tsx",
+      "examples/sizes.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Button",
+    "types": "ButtonProps"
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "The content to display inside the button"
+    },
+    {
+      "name": "appearance", 
+      "type": "'primary' | 'outline' | 'subtle' | 'secondary' | 'transparent'",
+      "required": false,
+      "default": "secondary",
+      "description": "The visual appearance style of the button"
+    },
+    {
+      "name": "shape",
+      "type": "'rounded' | 'circular' | 'square'", 
+      "required": false,
+      "default": "rounded",
+      "description": "The shape styling of the button"
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large'",
+      "required": false, 
+      "default": "medium",
+      "description": "The size of the button"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "default": "false", 
+      "description": "Whether the button is disabled and non-interactive"
+    },
+    {
+      "name": "onClick",
+      "type": "(event: React.MouseEvent<HTMLButtonElement>) => void",
+      "required": false,
+      "default": "",
+      "description": "Callback function triggered when the button is clicked"
+    }
+  ]
+}

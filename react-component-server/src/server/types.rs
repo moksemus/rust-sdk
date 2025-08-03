@@ -17,9 +17,10 @@ pub struct ReactComponent {
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 pub struct ComponentProp {
     pub name: String,
+    #[serde(rename = "type")]
     pub prop_type: String,
     pub required: bool,
-    #[serde(skip_serializing_if = "String::is_empty")]
+    #[serde(rename = "default")]
     pub default_value: String,
     pub description: String,
 }
@@ -58,13 +59,6 @@ pub struct GetComponentRequest {
     pub include_typescript: Option<bool>,
 }
 
-#[derive(Debug, Deserialize, JsonSchema)]
-pub struct SearchComponentsRequest {
-    pub query: String,
-    pub categories: Option<Vec<String>>,
-    pub tags: Option<Vec<String>>,
-    pub limit: Option<usize>,
-}
 
 #[derive(Debug, Deserialize, JsonSchema)]
 pub struct GetDocumentationRequest {
@@ -90,18 +84,37 @@ pub struct DocumentationSection {
     pub code_examples: Vec<String>,
 }
 
+// Component manifest structure for file-based loading
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
+pub struct ComponentManifest {
+    pub name: String,
+    pub description: String,
+    pub category: String,
+    pub tags: Vec<String>,
+    pub version: String,
+    pub dependencies: HashMap<String, String>,
+    pub files: ComponentFiles,
+    pub exports: ComponentExports,
+    pub props: Vec<ComponentProp>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
+pub struct ComponentFiles {
+    pub component: String,
+    pub types: String,
+    pub documentation: String,
+    pub examples: Vec<String>,
+    pub utils: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
+pub struct ComponentExports {
+    pub main: String,
+    pub types: String,
+}
+
 // Wrapper types to ensure object schemas for MCP inspector compatibility
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 pub struct ComponentListResponse {
     pub components: Vec<ComponentMetadata>,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
-pub struct DocumentationTopicsResponse {
-    pub topics: Vec<String>,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
-pub struct ComponentTagsResponse {
-    pub tags: Vec<String>,
 }

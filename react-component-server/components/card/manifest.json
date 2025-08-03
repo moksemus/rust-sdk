@@ -1,0 +1,55 @@
+{
+  "name": "Card",
+  "description": "A container component from Fluent UI that groups related content and actions in a flexible layout surface.",
+  "category": "Layout",
+  "tags": ["card", "container", "layout", "surface", "fluent-ui"],
+  "version": "1.0.0",
+  "dependencies": {
+    "fluent_ui": "@fluentui/react-components",
+    "react": ">=16.8.0",
+    "typescript": ">=4.0.0"
+  },
+  "files": {
+    "component": "component.tsx",
+    "types": "types.ts",
+    "documentation": "README.md",
+    "examples": [
+      "examples/basic.tsx"
+    ],
+    "utils": []
+  },
+  "exports": {
+    "main": "Card",
+    "types": "CardProps"
+  },
+  "props": [
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "required": false,
+      "default": "",
+      "description": "The content to display inside the card"
+    },
+    {
+      "name": "appearance",
+      "type": "'filled' | 'filled-alternative' | 'outline' | 'subtle'",
+      "required": false,
+      "default": "filled",
+      "description": "The visual appearance of the card"
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large'",
+      "required": false,
+      "default": "medium",
+      "description": "The size of the card"
+    },
+    {
+      "name": "orientation",
+      "type": "'horizontal' | 'vertical'",
+      "required": false,
+      "default": "vertical",
+      "description": "The layout orientation of the card"
+    }
+  ]
+}

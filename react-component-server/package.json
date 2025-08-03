@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "debug-paths": "pwd && ls -la . && ls -la ../target/release/ || echo 'No target found'",
+    "build-and-launch-abs": "cargo build --release && npx @modelcontextprotocol/inspector/Users/maksimstriletskii/RustroverProjects/rust-mcp-fluent/target/release/react-component-server",
+    "build-and-launch-rel": "cargo build --release && npx @modelcontextprotocol/inspector ../target/release/react-component-server"
+  }
+}

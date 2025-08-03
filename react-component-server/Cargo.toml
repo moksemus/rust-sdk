@@ -14,18 +14,6 @@ readme = "README_REACT_COMPONENTS.md"
 name = "react-component-server"
 path = "src/main.rs"
 
-[[bin]]
-name = "test-basic"
-path = "src/client/test_react_component_server.rs"
-
-[[bin]]
-name = "test-advanced"
-path = "src/client/test_react_advanced.rs"
-
-[[bin]]  
-name = "test-errors"
-path = "src/client/test_react_errors.rs"
-
 [dependencies]
 # Core MCP dependencies
 rmcp = { path = "../crates/rmcp", features = [
